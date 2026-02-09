@@ -67,7 +67,27 @@ books.forEach(book => {
   });
 });
 
-// Skill Card Modal
+// Scroll Animation with Intersection Observer
+const sectionItems = document.querySelectorAll('.section-item');
+const observerOptions = {
+  threshold: 0.1,
+  rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+      observer.unobserve(entry.target);
+    }
+  });
+}, observerOptions);
+
+sectionItems.forEach(item => {
+  observer.observe(item);
+});
+
+
 const skillCards = document.querySelectorAll('.skill-card');
 const skillModal = document.getElementById('skillModal');
 const modalTitle = document.getElementById('modalTitle');
