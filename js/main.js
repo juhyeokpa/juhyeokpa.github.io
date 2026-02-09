@@ -67,3 +67,35 @@ books.forEach(book => {
   });
 });
 
+// Skill Card Modal
+const skillCards = document.querySelectorAll('.skill-card');
+const skillModal = document.getElementById('skillModal');
+const modalTitle = document.getElementById('modalTitle');
+const modalDescription = document.getElementById('modalDescription');
+const modalClose = document.querySelector('.modal-close');
+
+if (skillCards.length > 0) {
+  skillCards.forEach(card => {
+    card.addEventListener('click', () => {
+      const skill = card.dataset.skill;
+      const description = card.dataset.description;
+      
+      modalTitle.textContent = skill;
+      modalDescription.textContent = description;
+      skillModal.classList.add('active');
+    });
+  });
+}
+
+if (skillModal) {
+  modalClose.addEventListener('click', () => {
+    skillModal.classList.remove('active');
+  });
+
+  skillModal.addEventListener('click', (e) => {
+    if (e.target === skillModal) {
+      skillModal.classList.remove('active');
+    }
+  });
+}
+
