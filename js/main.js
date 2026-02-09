@@ -94,7 +94,7 @@ const modalTitle = document.getElementById('modalTitle');
 const modalDescription = document.getElementById('modalDescription');
 const modalClose = document.querySelector('.modal-close');
 
-if (skillCards.length > 0) {
+if (skillCards && skillCards.length > 0 && skillModal && modalTitle && modalDescription) {
   skillCards.forEach(card => {
     card.addEventListener('click', () => {
       const skill = card.dataset.skill;
@@ -107,7 +107,7 @@ if (skillCards.length > 0) {
   });
 }
 
-if (skillModal) {
+if (skillModal && modalClose) {
   modalClose.addEventListener('click', () => {
     skillModal.classList.remove('active');
   });
