@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>About | 주혁</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script>
+    // 페이지 렌더 전에 바로 다크모드 적용
+    if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark");
+    }
+  </script>
+</head>
+<body>
+
+<nav class="main-nav">
+  <a href="index.html" class="logo">
+    <img src="assets/logo.jpg" alt="home logo" />
+  </a>
+
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="projects.html">Projects</a></li>
+  </ul>
+  <button id="theme-toggle" class="theme-btn">🌙</button>
+</nav>
+
+<section class="about">
+  <h2>About Me</h2>
+
+  <div class="education-row">
+    <div class="edu-title">
+      <h3>👨‍🎓 Education</h3>
+    </div>
+    <div class="edu-list">
+      <ol>
+        <li><strong>2020.03~2026.03</strong> 신한대학교 ※졸업</li>
+        <li><strong>2020.03~2023.03</strong> 개발 동아리</li>
+        <li><strong>2023.04~2026.03</strong> 마모키 학부동아리</li>
+      </ol>
+    </div>
+  </div>
+
+  <h3>📜 Certificate</h3>
+  <ul>
+    <li>정보처리기사 필기</li>
+  </ul>
+
+ 
+
+  <h3>🛠️ Skills</h3>
+  <div class="skills">
+    <div class="skills-grid">
+      <div class="skill-card">Python</div>
+      <div class="skill-card">Java</div>
+      <div class="skill-card">C++</div>
+      <div class="skill-card">Git</div>
+      <div class="skill-card">Docker</div>
+      <div class="skill-card">AWS</div>
+      <div class="skill-card">DBMS</div>
+      <div class="skill-card">Spring Boot</div>
+      <div class="skill-card">FastAPI</div>
+      <div class="skill-card">Redis</div>
+      <div class="skill-card">AI</div>
+      <div class="skill-card">RESTful API</div>
+      <div class="skill-card">Ubuntu</div>
+      <div class="skill-card">Firebase</div>
+      <div class="skill-card">Postman</div>
+      <div class="skill-card">HTML</div>
+      <div class="skill-card">JS</div>
+      <div class="skill-card">CSS</div>
+    </div>
+  </div>
+  <h3>🏆 Awards</h3>
+  <ul>
+    <li>캡스톤 디자인 장려상</li>
+    <li>신한대학교 SW 경진대회 장려상</li>
+    <li>SW중심사업단 우수상 창업아이디어대회 본인아이디어 선정</li>
+  </ul>
+  <p>
+    Spring Boot와 FastAPI 기반으로  
+    AI API를 연동한 백엔드 서비스를 개발해왔습니다.
+  </p>
+</section>
+<script src="js/main.js"></script>
+</body>
+</html>

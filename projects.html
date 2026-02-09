@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>Projects | 주혁</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style-projects.css" />
+  <script>
+    // 페이지 렌더 전에 바로 다크모드 적용
+    if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark");
+    }
+  </script>
+</head>
+<body>
+
+<nav class="main-nav">
+  <a href="index.html" class="logo">
+    <img src="assets/logo.jpg" alt="home logo" />
+  </a>
+
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="projects.html">Projects</a></li>
+  </ul>
+  <button id="theme-toggle" class="theme-btn">🌙</button>
+</nav>
+
+<section class="projects-layout">
+  <!-- 왼쪽: 카드 리스트 -->
+  <div class="project-list">
+    <div class="project-card" data-project="healthcare">
+      <h3>노동자 헬스케어 시스템</h3>
+      <p>CCTV 기반 실시간 동작 분석</p>
+    </div>
+
+    <div class="project-card" data-project="family">
+      <h3>AI 기반 가족 소통 플랫폼</h3>
+      <p>심리 분석 및 가족 커뮤니케이션</p>
+    </div>
+
+    <div class="project-card" data-project="law">
+      <h3>법률 도메인 특화 AI 챗봇</h3>
+      <p>법률 질문 전용 AI</p>
+    </div>
+  </div>
+
+  <!-- 오른쪽: 상세 패널 -->
+  <aside class="project-detail" id="project-detail">
+    <div class="empty-state">
+      👈 프로젝트를 선택해주세요
+    </div>
+
+    <div class="detail-content hidden">
+      <h2 id="detail-title"></h2>
+      <p id="detail-summary"></p>
+
+      <h3>문제</h3>
+      <p id="detail-problem"></p>
+
+      <h3>내 역할</h3>
+      <p id="detail-role"></p>
+
+      <h3>기술</h3>
+      <p id="detail-tech"></p>
+    </div>
+  </aside>
+</section>
+
+
+
+
+
+<script src="js/main.js"></script>
+<script src="js/project.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+.projects-layout {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  align-items: start;
+  
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+/* 카드 리스트 */
+.project-list {
+  display: flex;
+  padding-top: 100px;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 0;
+}
+
+.project-card {
+  padding: 20px;
+  border-radius: 12px;
+  background: var(--card-bg);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+}
+
+/* 오른쪽 상세 패널 */
+.project-detail {
+  position: sticky;
+  top: 150px;
+
+  width: 100%;
+  min-height: 400px;
+
+  padding: 30px;
+  border-radius: 16px;
+  background: var(--bg-color);
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.08);
+}
+
+.empty-state {
+  opacity: 0.6;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* 모바일 */
+@media (max-width: 900px) {
+  .projects-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .project-detail {
+    position: static;
+    height: auto;
+  }
+}

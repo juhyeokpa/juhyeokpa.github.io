@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <link rel="stylesheet" as="style" crossorigin
+  href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+  <meta charset="UTF-8" />
+  <title>Park Ju Hyeok | Backend Developer</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script>
+    // 페이지 렌더 전에 바로 다크모드 적용
+    if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark");
+    }
+  </script>
+</head>
+<body>
+
+<nav class="main-nav">
+  <a href="index.html" class="logo">
+    <img src="assets/logo.jpg" alt="home logo" />
+  </a>
+
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="projects.html">Projects</a></li>
+  </ul>
+    <button id="theme-toggle" class="theme-btn">🌙</button>
+</nav>
+
+<section class="home">
+  <div class="home-container">
+    <img src="assets/profile.jpg" alt="profile" />
+
+    <div class="home-text">
+      <h1>Park Ju Hyeok </h1>
+      <p id="changing-text">Backend Developer</p>
+    </div>
+  </div>
+
+  <div class="home-contact">
+    <a href="mailto:wngur3033@naver.com">wngur3033@naver.com</a>
+    <span>|</span>
+    <a href="tel:01092374909">TEL:010-9237-4909</a>
+    <span>|</span>
+    <a href="https://github.com/juhyeokpa" target="_blank">GitHub</a>
+  </div>
+</section>
+<script src="js/main.js"></script>
+</body>
+</html>
