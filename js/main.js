@@ -53,6 +53,21 @@ toggleBtn.addEventListener("click", () => {
   }
 });
 
+// Let's Go Button
+const goBtn = document.querySelector('.go-btn');
+if (goBtn) {
+  goBtn.addEventListener('click', () => {
+    // 페이드 아웃 이펙트
+    document.body.style.transition = 'opacity 0.5s ease';
+    document.body.style.opacity = '0';
+    
+    // 0.5초 후 페이지 이동
+    setTimeout(() => {
+      window.location.href = 'about.html';
+    }, 500);
+  });
+}
+
 const books = document.querySelectorAll('.book');
 const projects = document.querySelectorAll('.project-detail');
 
@@ -115,6 +130,35 @@ if (skillModal && modalClose) {
   skillModal.addEventListener('click', (e) => {
     if (e.target === skillModal) {
       skillModal.classList.remove('active');
+    }
+  });
+}
+
+// Image Modal
+const awardImages = document.querySelectorAll('.award-images img');
+const imageModal = document.getElementById('imageModal');
+const modalImage = document.getElementById('modalImage');
+
+if (awardImages.length > 0 && imageModal) {
+  awardImages.forEach(img => {
+    img.addEventListener('click', () => {
+      modalImage.src = img.src;
+      imageModal.classList.add('active');
+    });
+  });
+
+  // Close button
+  const imageModalClose = imageModal.querySelector('.modal-close');
+  if (imageModalClose) {
+    imageModalClose.addEventListener('click', () => {
+      imageModal.classList.remove('active');
+    });
+  }
+
+  // Click outside to close
+  imageModal.addEventListener('click', (e) => {
+    if (e.target === imageModal) {
+      imageModal.classList.remove('active');
     }
   });
 }

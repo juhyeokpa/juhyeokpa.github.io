@@ -27,9 +27,28 @@
   <button id="theme-toggle" class="theme-btn">🌙</button>
 </nav>
 
+<section class="projects-section">
+  <div class="projects-intro">
+    <h2>내 프로젝트</h2>
+    <p>저는 무언가를 만드는 것을 좋아하고, 항상 새로운 것을 만들고 있어요! 저의 프로젝트 몇 가지를 아래에서 보실 수 있습니다.
+      계속 추가 될 예정입니다!
+    </p>
+  </div>
+</section>
+
 <section class="projects-layout">
   <!-- 왼쪽: 카드 리스트 -->
   <div class="project-list">
+    <div class="project-card" data-project="pharmacy">
+      <h3>척척약사</h3>
+      <p>의약품 관리 시스템</p>
+    </div>
+
+    <div class="project-card" data-project="law">
+      <h3>법률 도메인 특화 AI 챗봇</h3>
+      <p>법률 질문 전용 AI</p>
+    </div>
+
     <div class="project-card" data-project="healthcare">
       <h3>노동자 헬스케어 시스템</h3>
       <p>CCTV 기반 실시간 동작 분석</p>
@@ -38,11 +57,6 @@
     <div class="project-card" data-project="family">
       <h3>AI 기반 가족 소통 플랫폼</h3>
       <p>심리 분석 및 가족 커뮤니케이션</p>
-    </div>
-
-    <div class="project-card" data-project="law">
-      <h3>법률 도메인 특화 AI 챗봇</h3>
-      <p>법률 질문 전용 AI</p>
     </div>
   </div>
 
@@ -53,19 +67,47 @@
     </div>
 
     <div class="detail-content hidden">
-      <h2 id="detail-title"></h2>
-      <p id="detail-summary"></p>
+  <h2 id="detail-title"></h2>
+  <p id="detail-summary"></p>
 
-      <h3>문제</h3>
-      <p id="detail-problem"></p>
+  <!-- ✅ 시연 영상 -->
+  <video
+    id="detail-video"
+    class="project-video hidden"
+    controls
+    autoplay
+    muted
+    playsinline
+    width="100%">
+    <source id="detail-video-source" src="" type="video/mp4">
+  </video>
 
-      <h3>내 역할</h3>
-      <p id="detail-role"></p>
+  <h3>문제</h3>
+  <p id="detail-problem"></p>
 
-      <h3>기술</h3>
-      <p id="detail-tech"></p>
-    </div>
+  <h3>내 역할</h3>
+  <p id="detail-role"></p>
+
+  <h3>기술</h3>
+  <p id="detail-tech"></p>
+</div>
   </aside>
+</section>
+
+<section class="pharmacy-gallery-section" id="pharmacy-gallery-section">
+  <div class="pharmacy-gallery-inner">
+    <h3>척척약사 갤러리</h3>
+    <div class="pharmacy-gallery-layout">
+      <div class="pharmacy-gallery-left">
+        <p class="pharmacy-gallery-empty" id="pharmacy-gallery-empty">척척약사 카드를 선택하면 이미지가 표시됩니다.</p>
+        <div class="pharmacy-gallery hidden" id="pharmacy-gallery"></div>
+      </div>
+      <div class="pharmacy-preview">
+        <p class="pharmacy-preview-empty" id="pharmacy-preview-empty">왼쪽에서 사진을 선택하세요.</p>
+        <img class="pharmacy-preview-image hidden" id="pharmacy-preview-image" alt="척척약사 미리보기" />
+      </div>
+    </div>
+  </div>
 </section>
 
 
